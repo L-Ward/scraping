@@ -7,6 +7,12 @@
             {{summary}}
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <h6>Comments:</h6>
+            {{#each comment}} <div>{{body}}</div> {{/each}}
+        </div>
+    </div>
     <form class="row">
         <div class="col form-group comments">
             <textarea class="form-control" id="textComment" rows="2" placeholder="Tell us what you think..."></textarea>

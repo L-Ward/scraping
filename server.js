@@ -69,15 +69,13 @@ app.get("/", function (req, res) {
                 // If an error occurred, send it to the client
                 console.log(err);
               });
-            // console.log(result.pkey);
-            // console.log(result.title);
-            // console.log(result.link);
-            // console.log(result.summary);
         });
-        // If we were able to successfully scrape and save an Article, send a message to the client
-        db.Article.find({}, function(err, articles){
+        db.Article.find({})
+        .populate("comment")
+        .then(function(articles){
             res.render("index", {articles:articles})
         });
+        // If we were able to successfully scrape and save an Article, send a message to the client
     });
 });
 
