@@ -1,8 +1,16 @@
-<div class="row">
-    <div class="col card article-container">
-        <a href={{link}}>
-            {{title}} 
-        </a>
-        {{summary}}
+<div class="article-block">
+    <div class="row">
+        <div class="col card article-container">
+            <a href={{link}}>
+                {{title}}
+            </a>
+            {{summary}}
+        </div>
     </div>
+    <form class="row">
+        <div class="col form-group comments">
+            <textarea class="form-control" id="textComment" rows="2" placeholder="Tell us what you think..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn" data-id={{_id}}>Submit</button>
+    </form>
 </div>
